@@ -30,4 +30,6 @@ declare module '@ioc:Apollo/Server' {
     export interface AdonisConfig extends Config {
         subscriptions?: Partial<AdonisSubscriptionServerOptions> | false
     }
+
+    export default ApolloServerContract
 }

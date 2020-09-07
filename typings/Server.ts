@@ -6,7 +6,7 @@ declare module '@ioc:Apollo/Server' {
     import WebSocket from 'ws'
     import { RouterContract } from '@ioc:Adonis/Core/Route'
 
-    export interface ApolloServerContract {
+    export class ApolloServerContract extends ApolloServerBase {
         applyMiddleware(Router: RouterContract): void
         installSubscriptionHandlers(): void
     }
@@ -31,5 +31,6 @@ declare module '@ioc:Apollo/Server' {
         subscriptions?: Partial<AdonisSubscriptionServerOptions> | false
     }
 
-    export default ApolloServerContract
+    const ApolloServer: typeof ApolloServerContract
+    export default ApolloServer
 }

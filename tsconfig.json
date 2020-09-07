@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "declaration": true,
+      "esModuleInterop": true,
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "outDir": "./build",
+      "sourceMap": true,
+      "strict": true,
+      "target": "esnext",
+      "types": ["@adonisjs/core"],
+      "strictFunctionTypes": false,
+      "skipLibCheck": true,
+      "experimentalDecorators": true,
+    },
+    "include": ["./src/**/*", "./providers/**/*", "./typings/**/*", "./commands/**/*"],
+    "exclude": ["./src/**/__tests__"]
+  }

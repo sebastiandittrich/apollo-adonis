@@ -1,6 +1,11 @@
 # Apollo Adonis
 This is an apollo-integration for adonisjs. It's still a work in progress, so PR's a very welcome. 
 
+## Installation
+```sh
+npm install apollo-adonis
+```
+
 ## Getting started
 Add a new file under `start/apollo.ts` with the following contents:
 ```ts

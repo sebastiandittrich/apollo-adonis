@@ -3,6 +3,7 @@
   "version": "0.0.6",
   "description": "Adonis Apollo integration. (WIP)",
   "main": "build/providers/ApolloProvider.js",
+  "types": "build/typings/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,5 +29,11 @@
   "files": [
     "build",
     "templates"
-  ]
+  ],
+  "adonisjs": {
+    "types": "apollo-adonis",
+    "providers": [
+      "apollo-adonis"
+    ]
+  }
 }

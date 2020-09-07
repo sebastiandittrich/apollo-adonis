@@ -9,7 +9,7 @@ export default class MakeModel extends BaseCommand {
 	 * The name of the resolver file.
 	 */
 	@args.string({ description: 'Name of the Resolver' })
-	public name: string
+	public name: string = ''
 
 	/**
 	 * Execute command

@@ -14,12 +14,13 @@
   "author": "Sebastian Dittrich <sebastian.dittrich@live.de>",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-core": "^2.17.0"
+    "apollo-server": "^2.17.0"
   },
   "peerDependencies": {
     "@adonisjs/core": "^5.0.0-preview-rc-1.11"
   },
   "devDependencies": {
+    "@adonisjs/ace": "^6.9.4",
     "@adonisjs/core": "^5.0.0-preview-rc-1.11",
     "@adonisjs/fold": "^6.3.5",
     "typescript": "^3.9.7"

@@ -1,4 +1,4 @@
-import { IocContract } from '@adonisjs/fold'
+import { ApplicationContract } from '@ioc:Adonis/Core/Application'
 import ApolloServer from '../src/ApolloServer'
 import { PubSub } from 'apollo-server'
 
@@ -22,13 +22,13 @@ import { PubSub } from 'apollo-server'
 |
 */
 export default class GraphQlProvider {
-  constructor (protected container: IocContract) {
+  constructor (protected app: ApplicationContract) {
   }
 
   public register () {
     // Register your own bindings
-    this.container.bind('Apollo/Server', () => ApolloServer)
-    this.container.singleton('Apollo/PubSub', () => new PubSub())
+    this.app.container.bind('Apollo/Server', () => ApolloServer)
+    this.app.container.singleton('Apollo/PubSub', () => new PubSub())
   }
 
   public async boot () {

@@ -1,39 +1,38 @@
 {
-  "name": "apollo-adonis",
-  "version": "0.1.1",
-  "description": "Adonis Apollo integration. (WIP)",
-  "main": "build/providers/ApolloProvider.js",
-  "types": "build/typings/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "adonis",
-    "apollo"
-  ],
-  "author": "Sebastian Dittrich <sebastian.dittrich@live.de>",
-  "license": "ISC",
-  "dependencies": {},
-  "peerDependencies": {
-    "apollo-server": "^2.17.0",
-    "@adonisjs/core": "^5.0.0-preview-rc-1.11"
-  },
-  "devDependencies": {
-    "apollo-server": "^2.17.0",
-    "@adonisjs/ace": "^6.9.4",
-    "@adonisjs/core": "^5.0.0-preview-rc-1.11",
-    "@adonisjs/fold": "^6.3.5",
-    "typescript": "^3.9.7"
-  },
-  "files": [
-    "build",
-    "templates"
-  ],
-  "adonisjs": {
-    "types": "apollo-adonis",
-    "providers": [
-      "apollo-adonis"
-    ]
-  }
+    "name": "apollo-adonis",
+    "version": "0.1.1",
+    "description": "Adonis Apollo integration. (WIP)",
+    "main": "build/providers/ApolloProvider.js",
+    "types": "build/typings/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "adonis",
+        "apollo"
+    ],
+    "author": "Sebastian Dittrich <sebastian.dittrich@live.de>",
+    "license": "ISC",
+    "peerDependencies": {
+        "@adonisjs/core": "^5.0.0",
+        "apollo-server": "^2.17.0"
+    },
+    "devDependencies": {
+        "@adonisjs/ace": "^6.9.4",
+        "@adonisjs/core": "^5.0.0",
+        "@adonisjs/fold": "^6.3.5",
+        "apollo-server": "^2.17.0",
+        "typescript": "^3.9.7"
+    },
+    "files": [
+        "build",
+        "templates"
+    ],
+    "adonisjs": {
+        "types": "apollo-adonis",
+        "providers": [
+            "apollo-adonis"
+        ]
+    }
 }

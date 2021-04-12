@@ -22,6 +22,7 @@ import { PubSub } from 'apollo-server'
 |
 */
 export default class GraphQlProvider {
+    static needsApplication = true
   constructor (protected app: ApplicationContract) {
   }
 

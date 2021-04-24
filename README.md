@@ -1,6 +1,9 @@
-# Apollo Adonis
+# Apollo Adonis (Adonis 5)
+[![NPM version][npm-image]][npm-url]
+[![build status][ci-image]][ci-url]
+[![npm download][download-image]][download-url]
 
-This is an Apollo Server integration for Adonisjs 5. It's still a work in progress, so PR's a very welcome.
+This is an Apollo Server integration for Adonisjs 5. It's still a work in progress, so PR's are very welcome.
 
 ## Quickstart
 
@@ -81,3 +84,10 @@ Route.get("/graphql/playground", (ctx) => ApolloServer.renderPlayground({ endpoi
 // If you want to use subscriptions in a manual setup
 ApolloServer.installSubscriptionHandlers()
 ```
+
+[npm-image]: https://img.shields.io/npm/v/apollo-adonis.svg
+[npm-url]: https://www.npmjs.com/package/apollo-adonis
+[ci-image]: https://github.com/sebastiandittrich/apollo-adonis/workflows/NPM%20Publish/badge.svg
+[ci-url]: https://github.com/sebastiandittrich/apollo-adonis/actions?query=workflow%3A%22NPM+Publish%22
+[download-image]: https://img.shields.io/npm/dm/apollo-adonis.svg
+[download-url]: https://www.npmjs.com/package/apollo-adonis

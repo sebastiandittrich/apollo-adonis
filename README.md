@@ -4,7 +4,7 @@ This is an Apollo Server integration for Adonisjs 5. It's still a work in progre
 
 ## Quickstart
 
-```bash
+```sh
 npm install graphql apollo graphql-tag apollo-adonis
 node ace invoke apollo-adonis
 ```
@@ -12,6 +12,8 @@ node ace invoke apollo-adonis
 You can leave out `graphql-tag` if you don't need it. The second command adds a file at `start/apollo.ts` which contains an Apollo Server instance. Then, add the following lines to your `start/routes.ts` file:
 
 ```ts
+// start/routes.ts
+
 import ApolloServer from "./apollo";
 
 ApolloServer.routes();

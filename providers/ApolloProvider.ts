@@ -1,47 +1,17 @@
-import { ApplicationContract } from '@ioc:Adonis/Core/Application'
-import ApolloServer from '../src/ApolloServer'
-import { PubSub } from 'apollo-server'
+import { ApplicationContract } from "@ioc:Adonis/Core/Application";
+import ApolloServer from "../src/ApolloServer";
+import { PubSub } from "apollo-server";
 
-/*
-|--------------------------------------------------------------------------
-| Provider
-|--------------------------------------------------------------------------
-|
-| Your application is not ready, when this file is loaded by the framework.
-| Hence, the level imports relying on the IoC container will not work.
-| You must import them inside the life-cycle methods defined inside
-| the provider class.
-|
-| @example:
-|
-| public async ready () {
-|   const Database = (await import('@ioc:Adonis/Lucid/Database')).default
-|   const Event = (await import('@ioc:Adonis/Core/Event')).default
-|   Event.on('db:query', Database.prettyPrint)
-| }
-|
-*/
 export default class GraphQlProvider {
-    static needsApplication = true
-  constructor (protected app: ApplicationContract) {
+  static needsApplication = true;
+  constructor(protected app: ApplicationContract) {}
+
+  public register() {
+    this.app.container.bind("Apollo/Server", () => ApolloServer);
+    this.app.container.singleton("Apollo/PubSub", () => new PubSub());
   }
 
-  public register () {
-    // Register your own bindings
-    this.app.container.bind('Apollo/Server', () => ApolloServer)
-    this.app.container.singleton('Apollo/PubSub', () => new PubSub())
-  }
-
-  public async boot () {
-    // All bindings are ready, feel free to use them
-  }
-
-  public async ready () {
-    // App is ready
-    // await GraphQl.installSubscriptionHandlers((await import('@ioc:Adonis/Core/Server')).default)
-  }
-
-  public async shutdown () {
-    // Cleanup, since app is going down
+  public boot() {
+    ApolloServer.defaultRoute = this.app.container.use("Adonis/Core/Route");
   }
 }

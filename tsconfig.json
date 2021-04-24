@@ -13,6 +13,6 @@
       "skipLibCheck": true,
       "experimentalDecorators": true,
     },
-    "include": ["./src/**/*", "./providers/**/*", "./typings/**/*", "./commands/**/*"],
+    "include": ["./src/**/*", "./providers/**/*", "./typings/**/*", "./commands/**/*", "./instructions.ts", "./templates/**/*"],
     "exclude": ["./src/**/__tests__"]
   }

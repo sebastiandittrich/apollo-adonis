@@ -21,7 +21,7 @@ export function convertAdonisRequestToApolloRequest(req: RequestContract): Reque
         method: req.method(),
     });
 }
-  
+
 export async function graphqlAdonis(ctx: HttpContextContract, options: GraphQLOptions) {
     return await runHttpQuery([ctx.request, ctx.response], {
         method: ctx.request.method(),

@@ -1,6 +1,6 @@
 {
     "name": "apollo-adonis",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Adonis Apollo integration. (WIP)",
     "main": "./build/providers/ApolloProvider",
     "types": "./build/typings/index",

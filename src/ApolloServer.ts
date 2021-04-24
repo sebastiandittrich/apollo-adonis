@@ -7,12 +7,7 @@ import { renderPlaygroundPage } from "@apollographql/graphql-playground-html";
 import { RouterContract } from "@ioc:Adonis/Core/Route";
 import { ServerContract } from "@ioc:Adonis/Core/Server";
 import WebSocket from "ws";
-import {
-  AdonisConfig,
-  AdonisConnectionContext,
-  AdonisIncomingMessage,
-  ApolloServerContract,
-} from "@ioc:Apollo/Server";
+import { AdonisConfig, ApolloServerContract } from "@ioc:Apollo/Server";
 import { graphqlAdonis } from "./graphqlAdonis";
 
 export default class ApolloServer
@@ -35,24 +30,23 @@ export default class ApolloServer
         }
       },
       ...options,
-      subscriptions:
-        options.subscriptions === false
-          ? false
-          : {
-              onConnect: async (
-                connectionParams,
-                _webSocket,
-                { request: { adonisContext: ctx } }: AdonisConnectionContext
-              ) => {
-                for (const key in connectionParams) {
-                  ctx.request.request.headers[
-                    key.toLowerCase()
-                  ] = (connectionParams as any)[key];
-                }
-                return ctx;
-              },
-              ...options.subscriptions,
-            },
+      subscriptions: {
+        onConnect: async (
+          connectionParams,
+          _webSocket,
+          { request: { adonisContext: ctx } }: any
+        ) => {
+          for (const key in connectionParams) {
+            ctx.request.request.headers[
+              key.toLowerCase()
+            ] = (connectionParams as any)[key];
+          }
+          return ctx;
+        },
+        ...(typeof options.subscriptions != "string"
+          ? options.subscriptions || {}
+          : {}),
+      },
     });
   }
 
@@ -99,7 +93,7 @@ export default class ApolloServer
           ctx.request.request.socket,
           Buffer.from(""),
           (ws) => {
-            const request = ctx.request.request as AdonisIncomingMessage;
+            const request = ctx.request.request as any;
             request.adonisContext = ctx;
             this.wsServer!.emit("connection", ws, request);
           }

@@ -3,7 +3,7 @@
 [![build status][ci-image]][ci-url]
 [![npm download][download-image]][download-url]
 
-This is an Apollo Server integration for Adonisjs 5. It's still a work in progress, so PR's a very welcome.
+This is an Apollo Server integration for Adonisjs 5. It's still a work in progress, so PR's are very welcome.
 
 ## Quickstart
 

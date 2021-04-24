@@ -1,4 +1,5 @@
 import ApolloServer from "@ioc:Apollo/Server";
+import gql from "graphql-tag";
 
 export default new ApolloServer({
   typeDefs: gql`

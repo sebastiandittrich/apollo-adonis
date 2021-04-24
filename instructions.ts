@@ -14,7 +14,7 @@ export default async function instructions(
   const template = new sink.files.MustacheFile(
     projectRoot,
     apolloPath,
-    join(__dirname, "templates", "apollo.ts")
+    join(__dirname, "templates", "apollo.ts.txt")
   );
 
   if (template.exists()) {

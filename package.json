@@ -20,8 +20,7 @@
     "author": "Sebastian Dittrich <sebastian.dittrich@live.de>",
     "license": "ISC",
     "peerDependencies": {
-        "@adonisjs/core": "~5.0.4-preview-rc",
-        "@adonisjs/sink": "^5.1.2"
+        "@adonisjs/core": "~5.0.4-preview-rc"
     },
     "dependencies": {
         "apollo-server": "^2.23.0",

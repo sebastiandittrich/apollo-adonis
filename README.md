@@ -3,7 +3,7 @@
 [![build status][ci-image]][ci-url]
 [![npm download][download-image]][download-url]
 
-This is an Apollo Server integration for Adonisjs 5. It's still a work in progress, so PR's are very welcome.
+This is an Apollo Server integration for Adonisjs 5.
 
 ## Quickstart
 
@@ -91,3 +91,6 @@ ApolloServer.installSubscriptionHandlers()
 [ci-url]: https://github.com/sebastiandittrich/apollo-adonis/actions?query=workflow%3A%22NPM+Publish%22
 [download-image]: https://img.shields.io/npm/dm/apollo-adonis.svg
 [download-url]: https://www.npmjs.com/package/apollo-adonis
+
+## Contributing
+Feel free to open a PR with your bug fixes! If you have are missing any features, please open an issue before investing time into submitting a PR. This way, I can decide if your idea is something I want to support with this library.

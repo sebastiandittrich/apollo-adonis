@@ -29,7 +29,7 @@ export async function graphqlAdonis(ctx: HttpContextContract, options: GraphQLOp
             ...options,
             context: ctx
         },
-        query: ctx.request.method() === 'POST' ? ctx.request.post() : ctx.request.get(),
+        query: ctx.request.method() === 'POST' ? ctx.request.body() : ctx.request.get(),
         request: convertAdonisRequestToApolloRequest(ctx.request)
     }).then(({ graphqlResponse, responseInit }) => {
         if(responseInit.headers) {

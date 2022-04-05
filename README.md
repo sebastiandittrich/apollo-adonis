@@ -8,7 +8,7 @@ This is an Apollo Server integration for Adonisjs 5.
 ## Quickstart
 
 ```sh
-npm install graphql apollo graphql-tag apollo-adonis
+npm install graphql@15.8.0 apollo graphql-tag apollo-adonis
 node ace invoke apollo-adonis
 ```
 

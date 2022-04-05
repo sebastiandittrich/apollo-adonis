@@ -30,7 +30,7 @@ export default class ApolloServer
         }
       },
       ...options,
-      subscriptions: {
+      subscriptions: options.subscriptions !== false ? {
         onConnect: async (
           connectionParams,
           _webSocket,
@@ -46,7 +46,7 @@ export default class ApolloServer
         ...(typeof options.subscriptions != "string"
           ? options.subscriptions || {}
           : {}),
-      },
+      } : false,
     });
   }
 

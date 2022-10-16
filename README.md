@@ -78,7 +78,7 @@ The `routes` method registers routes which are then calling the `handle` and `re
 // start/routes.ts
 import ApolloServer from "./apollo";
 
-Route.route("/graphql", ['GET', 'POST'] (ctx) => ApolloServer.handle(ctx));
+Route.route("/graphql", ['GET', 'POST'], (ctx) => ApolloServer.handle(ctx));
 Route.get("/graphql/playground", (ctx) => ApolloServer.renderPlayground({ endpoint: '/graphql' }));
 
 // If you want to use subscriptions in a manual setup
